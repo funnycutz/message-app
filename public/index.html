@@ -32,3 +32,27 @@
 
     document.getElementById('sendMessageForm').addEventListener('submit', async function(e) {
       e.preventDefault();
+      const toUser = document.getElementById('toUser').value;
+      const message = document.getElementById('message').value;
+      
+      const response = await fetch('http://localhost:3000/send-message', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fromUser: 'yourUsername',  // Change with logged-in user
+          toUser,
+          message
+        })
+      });
+
+      if (response.ok) {
+        fetchMessages(); // Refresh message list
+      } else {
+        alert('Message failed');
+      }
+    });
+
+    fetchMessages();
+  </script>
+</body>
+</html>
