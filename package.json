@@ -1,0 +1,17 @@
+{
+  "name": "message-app",
+  "version": "1.0.0",
+  "description": "A simple messaging app",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0",
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Ton Nom",
+  "license": "ISC"
+}
